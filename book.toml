@@ -1,0 +1,6 @@
+[book]
+authors = ["MundakaZgz"]
+language = "en"
+multilingual = false
+src = "src"
+title = "100 days of Kafka"
