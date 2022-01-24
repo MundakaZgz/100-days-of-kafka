@@ -4,5 +4,6 @@ In this journey I will also learn about [mdbook tool](https://github.com/rust-la
 
 As it is easier to walk the walk if you are not alone I have my own group of crazy people doing the same challenge as me:
 - [Cristina Rodriguez]()
-- [Ramón Royo]()
-- [Juanlu Sanz](https://github.com/juanlu-sanz)
+- [Sagrario Carrillo]()
+- [Ramón Royo]()?
+- [Juanlu Sanz](https://github.com/juanlu-sanz)?
