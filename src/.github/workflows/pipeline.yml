@@ -14,9 +14,10 @@ jobs:
           # mdbook-version: 'latest'
 
       - run: mdbook build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+      
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
-          branch: 'refs/heads/main' # The branch the action should deploy to.
-          folder: ./book
+          path: "./book"
+        env:
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
