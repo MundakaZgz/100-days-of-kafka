@@ -15,16 +15,8 @@ jobs:
 
       - run: mdbook build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
-          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./book
-      
-      - name: Upload Documentation to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
-        with:
-          path: "./book"
-        env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          branch: 'refs/heads/main' # The branch the action should deploy to.
+          folder: ./book
