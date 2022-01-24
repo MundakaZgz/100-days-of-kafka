@@ -28,5 +28,3 @@ jobs:
           path: "./book"
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-
-          
