@@ -1,0 +1,33 @@
+# Events
+Today we have learnt a very basic but a very important thing about events: "events are things that has happened".
+With this simple concept in mind we have used the Confluent CLI (ccloud at the begining but we have also used the confluent cli, newest one ) to produce and consume events in an easy way from our console.
+
+For the installation I have used the latest version under /usr/local/bin folder
+
+```bash
+## ccloud cli
+curl -L --http1.1 https://cnfl.io/ccloud-cli | sh -s -- -b /usr/local/bin
+
+# confluent cli
+curl -L --http1.1 https://cnfl.io/cli | sh -s -- -b /usr/local/bin 
+```
+
+After login with each of the downloaded tools, I checked the clusters I had created.
+
+![Topic description](/assets/images/day2/clusters.png)
+
+After creating an API Key (which I am not going to share with you) and configuring it to be used with my cluster I was ready to start producing and consuming events from the CLI.
+
+```bash
+# command to prepare CLI to consume events from the topic poems
+confluent kafka topic consume --from-beginning poems
+```
+
+```bash
+# command to prepare CLI to produce events to the topic poems
+confluent kafka topic produce --parse-key --delimiter : --value-format string poems
+```
+
+![Producer consumer](/assets/images/day2/producer-consumer.png)
+
+After this exercise I destroyed the cluster to avoid costs.
