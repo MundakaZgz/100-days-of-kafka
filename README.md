@@ -1,2 +1,2 @@
 # 100-days-of-kafka
-![Book Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Book status](https://github.com/MundakaZgz/100-days-of-kafka/actions/workflows/pipeline.yml/badge.svg)
