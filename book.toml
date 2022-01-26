@@ -12,11 +12,11 @@ semver = "1.0.4"
 [build] 
 create-missing = false
 
-[preprocessor.fs-summary]
+# [preprocessor.fs-summary]
 # (default: true)
-clean-paths = false
+# clean-paths = false
 
 # other preprocessors will naturally need to 
 # run after the summary has been generated 
-[preprocessor.links]
-after = ["fs-summary"] 
+#[preprocessor.links]
+#after = ["fs-summary"] 
