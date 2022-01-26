@@ -5,7 +5,11 @@ multilingual = false
 src = "src"
 title = "100 days of Kafka"
 
-[build]
+[dependencies]
+mdbook = { version = "0.4.14", default-features = false }
+semver = "1.0.4"
+
+[build] 
 create-missing = false
 
 [preprocessor.fs-summary]
