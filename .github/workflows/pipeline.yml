@@ -14,12 +14,15 @@ jobs:
         with:
           mdbook-version: 'latest'
       
-      - name: Install rust with mdbook-fs-summary
+      - name: Install minimal stable with clippy and rustfmt
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: stable
           components: mdbook-fs-summary
+
+      - name: Install preprocessors
+        run: cargo install mdbook-fs-summary
 
       - run: mdbook build
 
