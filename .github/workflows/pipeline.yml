@@ -14,15 +14,12 @@ jobs:
         with:
           mdbook-version: 'latest'
       
-      - name: Install minimal stable with clippy and rustfmt
+      - name: Install rust with mdbook-fs-summary
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: stable
-          components: rustfmt, clippy
-
-      - name: Install preprocessors
-        run: cargo install mdbook-fs-summary
+          components: mdbook-fs-summary
 
       - run: mdbook build
 
@@ -30,5 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
+          publish_branch: gh-pages
           publish_dir: ./book
