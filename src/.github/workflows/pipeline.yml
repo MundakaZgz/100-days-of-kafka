@@ -14,6 +14,12 @@ jobs:
         with:
           mdbook-version: 'latest'
 
+      - name: Install mdBook dependencies
+        uses: actions-rs/install@v0.1
+        with:
+          crate: mdbook-fs-summary
+          version: latest
+
       - run: mdbook build
 
       - name: Deploy

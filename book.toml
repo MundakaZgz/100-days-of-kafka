@@ -4,3 +4,15 @@ language = "en"
 multilingual = false
 src = "src"
 title = "100 days of Kafka"
+
+[build]
+create-missing = false
+
+[preprocessor.fs-summary]
+# (default: true)
+clean-paths = false
+
+# other preprocessors will naturally need to 
+# run after the summary has been generated 
+[preprocessor.links]
+after = ["fs-summary"] 
